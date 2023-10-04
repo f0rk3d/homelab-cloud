@@ -15,7 +15,7 @@ autoinstall:
   # "[late-commands] are run in the installer environment with the installed system mounted at /target."
   late-commands:
     # randomly generate the hostname & show the IP at boot
-    - echo gh0stsh1p-$(openssl rand -hex 2) > /target/etc/hostname
+    - echo gh0st-$(openssl rand -hex 2) > /target/etc/hostname
     # dump the IP out at login screen
     - echo "Ubuntu 22.04 LTS \nIP - $(hostname -I)\n" > /target/etc/issue
     ### Setting up the screen time out and ignore lid closed 
